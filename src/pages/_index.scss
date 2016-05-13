@@ -1,0 +1,20 @@
+#index-page {
+  .main-cover {
+    &__image {
+      display: block;
+      height: auto;
+
+      $this-max-width: image-width("/assets/images/main-cover-left.jpg") + image-width("/assets/images/main-cover-right.jpg");
+
+      &--left {
+        float: left;
+        width: image-width("/assets/images/main-cover-left.jpg") / $this-max-width * 100%;
+      }
+
+      &--right {
+        float: right;
+        width: image-width("/assets/images/main-cover-right.jpg") / $this-max-width * 100%;
+      }
+    }
+  }
+}
