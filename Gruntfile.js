@@ -116,7 +116,9 @@ module.exports = function (grunt) {
       options: {
         sassDir: '<%= yeoman.src %>/',
         cssDir: '.tmp',
-        importPath: './bower_components'
+
+        importPath: './bower_components',
+        imagesDir: '<%= yeoman.src %>'
       },
       oneOff: {
         options: {
