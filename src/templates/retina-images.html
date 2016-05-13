@@ -1,0 +1,13 @@
+<script>
+  // Retina Script
+  // Read more at: http://shauninman.com/tmp/retina/
+  (function () {
+    'use strict';
+
+    if ((window.devicePixelRatio === undefined ? 1 : window.devicePixelRatio) > 1) {
+      document.cookie = 'HTTP_IS_RETINA=1;path=/';
+    } else {
+      document.cookie = 'HTTP_IS_RETINA=1;path=/;expires=Thu, 01 Jan 1970 00:00:01 GMT';
+    }
+  })();
+</script>
