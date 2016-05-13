@@ -1,0 +1,33 @@
+//////////////
+// Generics //
+//////////////
+
+body {
+  font-family: $HelveticaNeue;
+  font-size: $font-size--normal;
+  -moz-font-feature-settings: "liga", "kern";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  line-height: $line-height--normal;
+}
+
+strong {
+  font-weight: bold;
+}
+
+///////////////////////////
+// Border box everything //
+///////////////////////////
+
+*, *:after, *:before {
+  @include box-sizing(border-box);
+}

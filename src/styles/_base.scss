@@ -5,3 +5,15 @@
 @import "compass";
 @import "compass/reset";
 @import "compass/css3";
+
+///////////
+// Fonts //
+///////////
+
+$line-height--normal: 1.25em;
+$font-size--normal: 14px;
+
+$font-fallback: "Lucida Grande", "Arial", sans-serif;
+
+$HelveticaNeue: "Helvetica Neue", $font-fallback;
+$OpenSans: "Open Sans", $font-fallback;
