@@ -7,5 +7,19 @@
 @import "generics";
 @import "webfonts";
 
+@import "pages/index";
+
 // bower:scss
 // endbower
+
+////////////////
+// Containers //
+////////////////
+
+.container {
+  display: block;
+  margin: 0 auto;
+  max-width: $container--max-width;
+  min-width: $container--min-width;
+  width: 100%;
+}
