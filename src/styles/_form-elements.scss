@@ -1,0 +1,21 @@
+.button {
+  // TODO add a hover effect?
+
+  @include reset-box-model;
+
+  background: $color--accent;
+  @include border-radius($border-radius--normal);
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $HelveticaNeue;
+  font-size: 17px;
+  line-height: 1;
+  padding: 25px 95px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+
+  @include appearance(none);
+  @include reset-focus;
+}
