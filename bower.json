@@ -1,0 +1,9 @@
+{
+  "name": "hyperion-express",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "^2.2.3"
+  },
+  "devDependencies": {},
+  "appPath": "src"
+}
