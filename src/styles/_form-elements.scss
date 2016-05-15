@@ -18,4 +18,9 @@
 
   @include appearance(none);
   @include reset-focus;
+
+  &--small {
+    font-size: $font-size--normal;
+    padding: 18px 65px;
+  }
 }
