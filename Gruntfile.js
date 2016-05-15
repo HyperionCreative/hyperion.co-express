@@ -274,6 +274,17 @@ module.exports = function (grunt) {
           expand: true
         }]
       }
+    },
+
+    replace: {
+      html: {
+        src: '.tmp/pages/**/*.html',
+        overwrite: true,
+        replacements: [{
+          from: /<\!\-\-\@\@\@(.+)\@\@\@\-\->/gmi,
+          to: '$1'
+        }]
+      }
     }
   });
 
@@ -309,6 +320,7 @@ module.exports = function (grunt) {
     'cssmin', // TODO what is this written twice?
     'uglify',
     'filerev',
+    'replace',
     'copy:distHtml',
     'usemin',
     'htmlmin'
