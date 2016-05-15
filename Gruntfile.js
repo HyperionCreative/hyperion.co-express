@@ -143,9 +143,9 @@ module.exports = function (grunt) {
         src: [
           '<%= yeoman.dist %>/**/*.js',
           '<%= yeoman.dist %>/**/*.css',
-          '<%= yeoman.dist %>/assets/icons/as-fonts/**/*',
-          '<%= yeoman.dist %>/assets/images/**/*',
-          '<%= yeoman.dist %>/assets/webfonts/**/*'
+          '<%= yeoman.dist %>/assets/icons/as-fonts/**/*.{eot,svg,ttf,woff,woff2}',
+          '<%= yeoman.dist %>/assets/images/**/*.{gif,jpg,jpeg,png}',
+          '<%= yeoman.dist %>/assets/webfonts/**/*.{eot,svg,ttf,woff,woff2}'
         ]
       }
     },
