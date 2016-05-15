@@ -62,12 +62,19 @@ body {
 ////////////
 
 .title {
+  display: block;
   font-family: $OpenSans;
   font-size: 33px;
   font-style: italic;
   font-weight: 600;
   line-height: 1em;
   margin-bottom: 1em;
+
+  &--small {
+    font-size: 16px;
+    line-height: 1em;
+    margin-bottom: 0.25em;
+  }
 
   &--big {
     font-size: 35px;
