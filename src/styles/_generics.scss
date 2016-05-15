@@ -37,7 +37,13 @@ strong {
 // Containers //
 ////////////////
 
+body {
+  background: #eaeff2;
+}
+
 .container {
+  background: #ffffff;
+  @include box-shadow($box-shadow--normal);
   display: block;
   margin: 0 auto;
   max-width: $container--max-width;
