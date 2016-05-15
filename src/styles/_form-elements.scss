@@ -9,9 +9,9 @@
   cursor: pointer;
   display: inline-block;
   font-family: $HelveticaNeue;
-  font-size: 17px;
+  font-size: $button--font-size;
   line-height: 1;
-  padding: 25px 95px;
+  padding: (($button--height - $button--font-size) / 2) 95px;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;

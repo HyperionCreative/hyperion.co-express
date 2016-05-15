@@ -91,7 +91,7 @@
 
   .examples {
     padding-bottom: 95px;
-    
+
     &__list {
       $this-items-count: 3;
       $this-items-margin: 16px;
@@ -122,6 +122,34 @@
           text-transform: uppercase;
         }
       }
+    }
+  }
+
+  .call-to-action {
+    background: #f4f5f7;
+    @include legacy-pie-clearfix;
+    padding: 15px 0;
+
+    &__text {
+      $this-font-size: 17px;
+
+      float: left;
+      font-size: $this-font-size;
+      line-height: 1;
+      padding: (($button--height - $this-font-size) / 2) 0;
+    }
+
+    &__button {
+      float: right;
+    }
+  }
+
+  .contact-us {
+    font-size: 16px;
+    padding: 22px 0;
+
+    a {
+      text-decoration: underline;
     }
   }
 }
