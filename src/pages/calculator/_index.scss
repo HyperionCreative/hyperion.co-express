@@ -1,4 +1,6 @@
 #calculator-page {
+  min-height: 100vh;
+
   .small-container {
     width: 62.5%;
   }
@@ -39,6 +41,65 @@
         font-size: 40px;
         font-weight: 300;
         margin: 15px 0 25px 0;
+      }
+    }
+  }
+
+  .questions-section {
+    .question {
+      display: table-row;
+      width: 100%;
+
+      &__text-container, &__answers-container {
+        border-bottom: 1px solid #f2f2f3;
+        display: table-cell;
+        height: 100px;
+        padding: 25px 0;
+        vertical-align: middle;
+      }
+
+      &__text-container {
+        width: 62.5%;
+
+        .question__text {
+          color: $input--color;
+          font-size: 15px;
+          font-weight: 700;
+          width: 77.5%;
+
+          &-faded {
+            color: #838b95;
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: 0.75em;
+
+            a {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+
+      &__answers-container {
+        $this-spacing: 10px;
+
+        width: 37.5%;
+
+        .question__answers {
+          margin: 0 (- $this-spacing);
+        }
+
+        ul {
+          border-collapse: separate;
+          border-spacing: $this-spacing 0;
+          display: table;
+          table-layout: fixed;
+          width: 100%;
+
+          li {
+            display: table-cell;
+          }
+        }
       }
     }
   }

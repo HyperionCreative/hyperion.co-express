@@ -25,31 +25,63 @@
   }
 }
 
+input[type="email"],
+input[type="text"] {
+  @include appearance(none);
+  @include reset-box-model;
+  @include reset-focus;
+
+  background: transparent;
+  border: 1px solid $input--border-color;
+  @include border-radius($border-radius--normal);
+  color: $input--color;
+  display: block;
+  font-family: $input--font-family;
+  font-size: $input--font-size;
+  line-height: $input--height;
+  padding: 0 22px;
+  width: 100%;
+
+  &:focus {
+    border-color: $input-focused--border-color;
+  }
+
+  @include input-placeholder {
+    color: $input--placeholder-color;
+  }
+}
+
 .fancy-checkbox {
   $this-unchecked__background: #ffffff;
-  $this-unchecked__border-color: #d9dbdd;
+  $this-unchecked__border-color: $input--border-color;
   $this-unchecked__icon-color: $this-unchecked__border-color;
-  $this-unchecked__text-color: rgba(#444950, 0.87);
+  $this-unchecked__text-color: rgba($input--color, 0.87);
 
   $this-checked__background: #202a34;
   $this-checked__border-color: $this-checked__background;
   $this-checked__icon-color: rgba(#ffffff, 0.5);
   $this-checked__text-color: #ffffff;
 
-  $this-text__font-size: $font-size--normal;
+  $this-height: $input--height - 2; // We need to substract 2 as we have borders around it!
+  $this-text__font-size: $input--font-size;
 
   display: block;
   font-size: 0;
   @include legacy-pie-clearfix;
+  line-height: $this-height;
   position: relative;
 
   & > input[type="checkbox"],
   & > input[type="radio"] {
     display: none;
 
+    &:focus + label.fancy-checkbox__container {
+      border-color: $input-focused--border-color;
+    }
+
     &:checked + label.fancy-checkbox__container {
       background: $this-checked__background;
-      border: 1px solid $this-checked__border-color;
+      border: 1px solid $this-checked__border-color !important;
       color: $this-checked__text-color;
 
       .fancy-checkbox__box {
@@ -57,6 +89,7 @@
 
         &:before {
           content: $icon__checkbox__tick;
+          font-size: 20px;
         }
       }
     }
@@ -69,7 +102,7 @@
     color: $this-unchecked__text-color;
     cursor: pointer;
     display: block;
-    padding: 12px 0;
+    padding: 0;
     text-align: center;
   }
 
@@ -90,6 +123,7 @@
   }
 
   &__text {
+    font-family: $input--font-family;
     font-size: $this-text__font-size;
   }
 }
