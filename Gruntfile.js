@@ -1,5 +1,7 @@
 'use strict';
 
+// TODO there's a bug.. base doesn't work as expected on subdomains -.-
+
 module.exports = function (grunt) {
   require('time-grunt')(grunt);
   require('load-grunt-tasks')(grunt);
