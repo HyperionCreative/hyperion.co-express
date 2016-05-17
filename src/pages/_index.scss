@@ -146,10 +146,23 @@
 
   .contact-us {
     font-size: 16px;
+    @include legacy-pie-clearfix;
     padding: 22px 0;
 
     a {
       text-decoration: underline;
+    }
+
+    &__text {
+      &--left {
+        float: left;
+      }
+
+      &--right {
+        color: rgba($color--primary, 0.5);
+        float: right;
+        line-height: 2 * $line-height--normal;
+      }
     }
   }
 }
