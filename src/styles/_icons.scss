@@ -29,6 +29,9 @@ $icon__checkbox__tick: "\e902";
 .icon-angle:before {
     content: "\e900";
 }
+.icon-arrow__down:before {
+    content: "\e907";
+}
 .icon-checkbox__empty-box:before {
     content: $icon__checkbox__empty-box;
 }
@@ -43,6 +46,9 @@ $icon__checkbox__tick: "\e902";
 }
 .icon-crosshair:before {
     content: "\e905";
+}
+.icon-letters:before {
+    content: "\e908";
 }
 .icon-warning:before {
     content: "\e906";
