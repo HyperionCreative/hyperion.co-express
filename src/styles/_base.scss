@@ -45,8 +45,11 @@ $input-focused--border-color: rgba($input--color, 0.5);
 // Generics //
 //////////////
 
-$container--min-width: 1100px;
 $container--max-width: 1440px;
+// NOTE unused
+$container--min-width: 1100px;
+
+$container__phone-padding--vertical: 40px;
 
 $border-radius--normal: 5px;
 $box-shadow--normal: 2px 2px 2px 0px rgba(0,0,0,0.07);
@@ -56,40 +59,41 @@ $border-color--grey: #e1e1e1;
 ////////////////////////
 // Responsive helpers //
 ////////////////////////
-$desktop-breakpoint: 1366px;
-$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1350px;
+$tablet-breakpoint--large: 1024px;
+$tablet-breakpoint--small: 768px;
 
-// screen >= 1366px
+// screen >= $desktop-breakpoint
 @mixin desktop-screens {
   @media only screen and (min-width : $desktop-breakpoint) {
     @content;
   }
 }
 
-// screen >= 768
-@mixin desktop-and-tablet-screens {
-  @media only screen and (min-width : $tablet-breakpoint) {
-    @content;
-  }
-}
-
-// screen < 1366px
-@mixin handhold-screens {
-  @media only screen and (max-width : $desktop-breakpoint - 1px) {
-    @content;
-  }
-}
-
-// 768 <= screen < 1366px
+// $tablet-breakpoint--small <= screen < $desktop-breakpoint
 @mixin tablet-screens {
-  @media only screen and (min-width : $tablet-breakpoint) and (max-width : $desktop-breakpoint - 1px) {
+  @media only screen and (min-width : $tablet-breakpoint--small) and (max-width : $desktop-breakpoint - 1px) {
     @content;
   }
 }
 
-// screen < 768
+// $tablet-breakpoint--large <= screen < $desktop-breakpoint
+@mixin large-tablet-screens {
+  @media only screen and (min-width : $tablet-breakpoint--large) and (max-width : $desktop-breakpoint - 1px) {
+    @content;
+  }
+}
+
+// $tablet-breakpoint--small <= screen < $tablet-breakpoint--large
+@mixin small-tablet-screens {
+  @media only screen and (min-width : $tablet-breakpoint--small) and (max-width : $tablet-breakpoint--large - 1px) {
+    @content;
+  }
+}
+
+// screen < $tablet-breakpoint--small
 @mixin phone-screens {
-  @media only screen and (max-width : $tablet-breakpoint - 1px) {
+  @media only screen and (max-width : $tablet-breakpoint--small - 1px) {
     @content;
   }
 }

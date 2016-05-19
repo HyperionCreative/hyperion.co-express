@@ -23,6 +23,16 @@
     font-size: $font-size--normal;
     padding: 18px 65px;
   }
+
+  @include tablet-screens {
+    padding-left: 73px;
+    padding-right: 73px;
+  }
+
+  @include phone-screens {
+    padding-left: 62px;
+    padding-right: 62px;
+  }
 }
 
 input[type="email"],

@@ -1,6 +1,13 @@
 #index-page {
+  overflow: hidden;
+
   .main-cover {
     position: relative;
+
+    @include small-tablet-screens {
+      margin-left: -25vw;
+      width: 150vw;
+    }
 
     &__image {
       display: block;
@@ -8,6 +15,10 @@
 
       &--normal {
         width: 100%;
+
+        @include phone-screens {
+          display: none;
+        }
       }
 
       // This also acts as a text container
@@ -18,15 +29,33 @@
         @include background-size(cover);
 
         bottom: 0;
-        padding: 0 65px;
         position: absolute;
         right: 0;
         top: 0;
         width: 37.5%;
         z-index: 3;
 
-        // NOTE hardcoded value
-        padding-top: 177px;
+        @include desktop-screens {
+          padding: 0 60px;
+        }
+
+        @include tablet-screens {
+          padding: 0 30px 0 50px;
+        }
+
+        @include small-tablet-screens {
+          left: 50%;
+          padding: 0 30vw 0 5vw;
+          width: auto;
+        }
+
+        @include phone-screens {
+          background-image: url("/assets/images/main-cover-normal.jpg");
+          background-position: center;
+          padding: 70px $container__phone-padding--vertical 60px $container__phone-padding--vertical;
+          position: relative;
+          width: auto;
+        }
 
         // The white voil
         &:before {
@@ -42,15 +71,33 @@
         }
 
         p {
-          line-height: 2em;
-          margin-bottom: 40px;
-        }
+          font-size: 16px;
+          margin-bottom: 2em;
 
-        @media only screen and (max-width: $container--max-width - 1px) {
-          .line-highlighter {
-            display: none
+          @include desktop-screens {
+            line-height: 2em;
           }
         }
+      }
+    }
+
+    // Vertically aligns the container
+    & {
+      font-size: 0;
+
+      &__text-container {
+        display: inline-block;
+        vertical-align: middle;
+        width: 99.9%;
+      }
+
+      &__image--blurred:after {
+        content: "";
+
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        width: 0.1%;
       }
     }
   }
