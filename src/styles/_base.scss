@@ -52,3 +52,44 @@ $border-radius--normal: 5px;
 $box-shadow--normal: 2px 2px 2px 0px rgba(0,0,0,0.07);
 
 $border-color--grey: #e1e1e1;
+
+////////////////////////
+// Responsive helpers //
+////////////////////////
+$desktop-breakpoint: 1366px;
+$tablet-breakpoint: 768px;
+
+// screen >= 1366px
+@mixin desktop-screens {
+  @media only screen and (min-width : $desktop-breakpoint) {
+    @content;
+  }
+}
+
+// screen >= 768
+@mixin desktop-and-tablet-screens {
+  @media only screen and (min-width : $tablet-breakpoint) {
+    @content;
+  }
+}
+
+// screen < 1366px
+@mixin handhold-screens {
+  @media only screen and (max-width : $desktop-breakpoint - 1px) {
+    @content;
+  }
+}
+
+// 768 <= screen < 1366px
+@mixin tablet-screens {
+  @media only screen and (min-width : $tablet-breakpoint) and (max-width : $desktop-breakpoint - 1px) {
+    @content;
+  }
+}
+
+// screen < 768
+@mixin phone-screens {
+  @media only screen and (max-width : $tablet-breakpoint - 1px) {
+    @content;
+  }
+}
