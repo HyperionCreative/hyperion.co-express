@@ -146,15 +146,47 @@
         margin-top: 45px;
       }
 
-      &__counter {
-        color: #dfdfdf;
+      &__icon {
+        color: rgba($color--primary, 0.3);
         float: right;
+        margin-top: -1px;
+        text-align: center;
+        width: 45px;
+
+        &:before {
+          font-size: 18px;
+        }
+
+        &.icon-cogs {
+          margin-top: -7px;
+
+          &:before {
+            font-size: 30px;
+          }
+        }
+
+        &.icon-cloud {
+          margin-top: -2px;
+
+          &:before {
+            font-size: 20px;
+          }
+        }
+
+        &.icon-crosshair {
+          margin-top: -5px;
+
+          &:before {
+            font-size: 26px;
+          }
+        }
       }
 
       li {
         border-bottom: 1px solid $border-color--grey;
         font-size: 16px;
         padding: 17px;
+        padding-right: 10px;
 
         &:first-child {
           border-top: 1px solid $border-color--grey;
@@ -194,6 +226,7 @@
         }
 
         img {
+          display: block;
           height: auto;
           width: 100%;
         }
@@ -218,6 +251,7 @@
         @include desktop-screens {
           border-top: 0;
           border: 1px solid $border-color--grey;
+          min-height: 235px;
         }
 
         @include tablet-screens {
