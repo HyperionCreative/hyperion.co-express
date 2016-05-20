@@ -58,6 +58,18 @@ body {
   @include large-tablet-screens {
     width: 670px;
   }
+
+  @include small-tablet-screens {
+    padding-left: $container__small-tablet-padding--vertical;
+    padding-right: $container__small-tablet-padding--vertical;
+    width: 100%;
+  }
+
+  @include phone-screens {
+    padding-left: $container__phone-padding--vertical;
+    padding-right: $container__phone-padding--vertical;
+    width: 100%;
+  }
 }
 
 ////////////
@@ -72,6 +84,10 @@ body {
   font-weight: 600;
   line-height: 1em;
   margin-bottom: 1em;
+
+  @include phone-screens {
+    font-size: 30px;
+  }
 
   &--small {
     font-size: 16px;
