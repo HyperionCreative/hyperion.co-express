@@ -2,7 +2,9 @@
   // TODO add a hover effect?
 
   @include reset-box-model;
+  @include reset-focus;
 
+  @include appearance(none);
   background: $color--accent;
   @include border-radius($border-radius--normal);
   color: #ffffff;
@@ -11,13 +13,34 @@
   font-family: $HelveticaNeue;
   font-size: $button--font-size;
   line-height: 1;
+  overflow: hidden;
   padding: (($button--height - $button--font-size) / 2) 95px;
+  position: relative;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
+  z-index: 3;
 
-  @include appearance(none);
-  @include reset-focus;
+  &:after {
+    background: #ffffff;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: 0.2;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    width: 50px;
+    z-index: -2;
+  }
+
+  &:hover {
+    &:after {
+      left: 120%;
+      transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
 
   &--small {
     font-size: $font-size--normal;
@@ -114,6 +137,10 @@ input[type="text"] {
     display: block;
     padding: 0;
     text-align: center;
+
+    &:hover {
+      background: #f7f8f8;
+    }
   }
 
   &__box, &__text {
