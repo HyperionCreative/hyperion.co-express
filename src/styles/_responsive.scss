@@ -12,16 +12,3 @@
   @include desktop-screens { display: none !important; }
   @include phone-screens { display: none !important; }
 }
-
-// .visible-ps {
-//   @include desktop-screens { display: none !important; }
-//   @include tablet-screens { display: none !important; }
-// }
-//
-// .hidden-ts {
-//   @include tablet-screens { display: none !important; }
-// }
-//
-// .hidden-ps {
-//   @include phone-screens { display: none !important; }
-// }

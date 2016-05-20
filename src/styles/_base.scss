@@ -85,9 +85,23 @@ $tablet-breakpoint--small: 768px;
   }
 }
 
+// $tablet-breakpoint--large <= screen
+@mixin large-tablet-and-over-screens {
+  @media only screen and (min-width : $tablet-breakpoint--large) {
+    @content;
+  }
+}
+
 // $tablet-breakpoint--large <= screen < $desktop-breakpoint
 @mixin large-tablet-screens {
   @media only screen and (min-width : $tablet-breakpoint--large) and (max-width : $desktop-breakpoint - 1px) {
+    @content;
+  }
+}
+
+// screen < $tablet-breakpoint--large
+@mixin small-tablet-and-under-screens {
+  @media only screen and (max-width : $tablet-breakpoint--large - 1px) {
     @content;
   }
 }

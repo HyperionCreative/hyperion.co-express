@@ -2,46 +2,137 @@
 @import 'templates/footer-with-logo';
 
 #calculator-page {
-  font-size: 14px;
-  min-height: 100vh;
-  padding-bottom: 75px;
-  position: relative;
+  $this-container__small-tablet-padding--vertical: 38px;
 
-  #footer-with-logo {
-    bottom: 0;
-    left: 0;
-    line-height: 75px;
-    position: absolute;
-    right: 0;
+  font-size: 14px;
+
+  @include large-tablet-and-over-screens {
+    min-height: 100vh;
+    padding-bottom: 75px;
+    position: relative;
   }
 
   .small-container {
-    width: 62.5%;
+    width: 100%;
+
+    @include large-tablet-and-over-screens {
+      width: 900px;
+    }
+
+    @include small-tablet-screens {
+      padding-left: $this-container__small-tablet-padding--vertical;
+      padding-right: $this-container__small-tablet-padding--vertical;
+    }
+  }
+
+  .please-tell-us {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 300;
+    margin: 0;
+    padding: 67px 0 23px 0;
+
+    @include large-tablet-and-over-screens {
+      display: none;
+    }
+
+    @include phone-screens {
+      padding: 37px 0 22px 0;
+    }
+  }
+
+  #footer-with-logo {
+    @include large-tablet-and-over-screens {
+      bottom: 0;
+      color: #dee0e2;
+      left: 0;
+      line-height: 75px;
+      position: absolute;
+      right: 0;
+    }
+
+    @include small-tablet-and-under-screens {
+      background: #0c151e;
+      color: #5c646c;
+      line-height: 60px;
+    }
+  }
+
+  .calculator-summary {
+    &--top {
+      @include small-tablet-and-under-screens {
+        display: none;
+      }
+    }
+
+    &--bottom {
+      @include large-tablet-and-over-screens {
+        display: none;
+      }
+    }
   }
 
   .questions-section {
-    padding-top: 20px;
+    @include large-tablet-and-over-screens {
+      padding-top: 20px;
+    }
 
     .question {
+      $this-border: 1px solid $input--border-color;
+
       display: table-row;
       width: 100%;
 
+      @include phone-screens {
+        border-top: $this-border;
+        display: block;
+        margin: 0 (-$container__phone-padding--vertical);
+        padding: 25px $container__phone-padding--vertical;
+        width: auto;
+      }
+
       &__text-container, &__answers-container {
-        border-bottom: 1px solid $input--border-color;
         display: table-cell;
         height: 100px;
         padding: 25px 0;
         vertical-align: middle;
+
+        @include large-tablet-and-over-screens {
+          border-bottom: $this-border;
+        }
+
+        @include small-tablet-screens {
+          border-top: $this-border;
+        }
+
+        @include phone-screens {
+          display: block;
+          height: auto;
+        }
       }
 
       &__text-container {
-        width: 63.5%;
+        @include large-tablet-and-over-screens {
+          width: 63.5%;
+        }
+
+        @include small-tablet-screens {
+          width: 52.5%;
+        }
+
+        @include phone-screens {
+          padding: 0;
+        }
 
         .question__text {
           color: $input--color;
           font-size: 15px;
           font-weight: 700;
           width: 77.5%;
+
+          @include phone-screens {
+            width: 100%;
+          }
 
           &-faded {
             color: #838b95;
@@ -59,10 +150,24 @@
       &__answers-container {
         $this-spacing: 10px;
 
-        width: 36.5%;
+        @include large-tablet-and-over-screens {
+          width: 36.5%;
+        }
+
+        @include small-tablet-screens {
+          width: 47.5%;
+        }
+
+        @include phone-screens {
+          padding: 0;
+        }
 
         .question__answers {
           margin: 0 (- $this-spacing);
+
+          @include phone-screens {
+            margin: 0;
+          }
         }
 
         ul {
@@ -74,6 +179,24 @@
 
           li {
             display: table-cell;
+          }
+
+          @include phone-screens {
+            &, li {
+              display: block;
+            }
+
+            li {
+              margin-bottom: 10px;
+
+              &:first-child {
+                margin-top: 20px;
+              }
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
           }
         }
       }

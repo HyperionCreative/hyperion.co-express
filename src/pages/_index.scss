@@ -92,6 +92,10 @@
         display: inline-block;
         vertical-align: middle;
         width: 99.9%;
+
+        p {
+          font-size: $font-size--normal;
+        }
       }
 
       &__image--blurred:after {

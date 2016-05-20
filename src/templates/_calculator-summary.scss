@@ -1,11 +1,11 @@
-#calculator-summary {
+.calculator-summary {
   background: #202a34;
   color: #8e97a0;
   font-size: 14px;
   @include legacy-pie-clearfix;
   padding: 32px 0;
 
-  .calculator-summary__container {
+  &__container {
     width: 50%;
 
     &--left {
@@ -22,8 +22,8 @@
     }
   }
 
-  #order-details {
-    .order-details__highlighted {
+  .order-details {
+    &__highlighted {
       color: #ffffff;
       font-family: $OpenSans;
       font-size: 12px;
