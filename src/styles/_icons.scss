@@ -26,6 +26,9 @@
 $icon__checkbox__empty-box: "\e901";
 $icon__checkbox__tick: "\e902";
 
+.icon-hyperion-logo:before {
+    content: "\e909";
+}
 .icon-angle:before {
     content: "\e900";
 }
