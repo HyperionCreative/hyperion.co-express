@@ -106,24 +106,34 @@
     @include legacy-pie-clearfix;
     padding: 100px 0 140px 0;
 
+    @include tablet-screens {
+      padding: 50px 0 70px 0;
+    }
+
     p {
       line-height: 2;
     }
 
-    &__container {
-      width: 47.5%;
+    @include desktop-screens {
+      &__container {
+        width: 47.5%;
 
-      &--left {
-        float: left;
-      }
+        &--left {
+          float: left;
+        }
 
-      &--right {
-        float: right;
+        &--right {
+          float: right;
+        }
       }
     }
 
     &__list {
       margin-top: 7px;
+
+      @include tablet-screens {
+        margin-top: 45px;
+      }
 
       &__counter {
         color: #dfdfdf;
@@ -143,7 +153,19 @@
   }
 
   .examples {
-    padding-bottom: 95px;
+    @include desktop-screens {
+      padding-bottom: 95px;
+    }
+
+    @include tablet-screens {
+      text-align: center;
+    }
+
+    &__section-title {
+      color: rgba($color--primary, 0.5);
+      font-size: 20px;
+      margin-bottom: 1em;
+    }
 
     &__list {
       $this-items-count: 3;
@@ -154,9 +176,11 @@
       margin: 0 (-$this-items-margin / 2);
 
       li {
-        float: left;
-        padding: 0 ($this-items-margin / 2);
-        width: 100% / $this-items-count;
+        @include desktop-screens {
+          float: left;
+          padding: 0 ($this-items-margin / 2);
+          width: 100% / $this-items-count;
+        }
 
         img {
           height: auto;
@@ -165,10 +189,18 @@
       }
 
       &__text {
-        border: 1px solid $border-color--grey;
-        border-top: 0;
         font-size: 15px;
         padding: 32px 30px 42px 30px;
+
+        @include desktop-screens {
+          border-top: 0;
+          border: 1px solid $border-color--grey;
+        }
+
+        @include tablet-screens {
+          padding-bottom: 35px;
+          padding-top: 15px;
+        }
 
         .title--small {
           color: #bbbec4;
@@ -180,20 +212,27 @@
 
   .call-to-action {
     background: #f4f5f7;
-    @include legacy-pie-clearfix;
     padding: 15px 0;
+
+    &__container {
+      display: table-cell;
+      vertical-align: middle;
+
+      &--left {
+        width: 99%;
+      }
+
+      &--right {
+        width: 1%;
+      }
+    }
 
     &__text {
       $this-font-size: 17px;
 
-      float: left;
       font-size: $this-font-size;
       line-height: 1;
-      padding: (($button--height - $this-font-size) / 2) 0;
-    }
-
-    &__button {
-      float: right;
+      padding: (($button--height - $this-font-size) / 2) 25px (($button--height - $this-font-size) / 2) 0;
     }
   }
 

@@ -54,6 +54,10 @@ body {
   display: block;
   margin: 0 auto;
   width: 82.5%;
+
+  @include large-tablet-screens {
+    width: 670px;
+  }
 }
 
 ////////////
