@@ -1,0 +1,40 @@
+#calculator-summary {
+  background: #202a34;
+  color: #8e97a0;
+  font-size: 14px;
+  @include legacy-pie-clearfix;
+  padding: 32px 0;
+
+  .calculator-summary__container {
+    width: 50%;
+
+    &--left {
+      float: left;
+
+      p {
+        margin: 6px 0 15px 0;
+      }
+    }
+
+    &--right {
+      float: right;
+      text-align: right;
+    }
+  }
+
+  #order-details {
+    .order-details__highlighted {
+      color: #ffffff;
+      font-family: $OpenSans;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    &__price {
+      display: block;
+      font-size: 40px;
+      font-weight: 300;
+      margin: 15px 0 25px 0;
+    }
+  }
+}

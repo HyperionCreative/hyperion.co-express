@@ -1,0 +1,15 @@
+#footer-with-logo {
+  color: #dee0e2;
+  font-size: 15px;
+  line-height: 30px;
+  text-align: center;
+
+  .icon-hyperion-logo {
+    font-size: 26px;
+    padding-right: 5px;
+  }
+
+  .icon-hyperion-logo, a {
+    vertical-align: middle;
+  }
+}
