@@ -90,7 +90,7 @@ body {
   }
 
   &--small {
-    font-size: 16px;
+    font-size: $font-size--normal;
     line-height: 1em;
     margin-bottom: 0.25em;
   }
