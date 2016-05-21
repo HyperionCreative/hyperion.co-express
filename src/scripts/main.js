@@ -14,7 +14,7 @@
 
         $.ajax({
           type: 'post',
-          url: 'http://localhost:9001/php/email-sender.php',
+          url: 'php/email-sender.php',
 
           dataType: 'json',
           data: {

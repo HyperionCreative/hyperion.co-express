@@ -6,26 +6,8 @@
   Options -MultiViews
   RewriteEngine On
 
-  # ------------------------------------------------------------------------------
-  # | Forcing the "www." at the beginning of URLs                                |
-  # ------------------------------------------------------------------------------
-
-    # Be aware that the following might not be a good idea if you use "real"
-    # subdomains for certain parts of your website.
-
-    #@@@ RewriteCond %{HTTP_HOST} !^www\. @@@#
-    #@@@ RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L] @@@#
-
-  # ------------------------------------------------------------------------------
-  # | Removing the "/" at the end of URLs                                        |
-  # ------------------------------------------------------------------------------
-
-    # Without this line, if a user requests a directory, then he will be blocked
-    # in a continuous redirect loop!
-    DirectorySlash Off
-
-    RewriteRule ^(.*)/$ /$1 [R=301,L]
-
+  DirectoryIndex index.html
+  DirectorySlash On
 
 # ##############################################################################
 # # High DPI Images and Videos                                                 #

@@ -23,7 +23,7 @@
 
       // This also acts as a text container
       &--blurred {
-        background-image: url("/assets/images/main-cover-blurred.jpg");
+        background-image: url("../assets/images/main-cover-blurred.jpg");
         background-position: right top;
         background-repeat: no-repeat;
         @include background-size(cover);
@@ -54,7 +54,7 @@
         }
 
         @include phone-screens {
-          background-image: url("/assets/images/main-cover-normal.jpg");
+          background-image: url("../assets/images/main-cover-normal.jpg");
           background-position: center;
           padding: 70px $container__phone-padding--vertical 60px $container__phone-padding--vertical;
           position: relative;
