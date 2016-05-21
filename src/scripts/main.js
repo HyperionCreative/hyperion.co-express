@@ -1,6 +1,95 @@
 (function ($) {
   'use strict';
 
+  // Form submission logic
+  (function () {
+    $(document).on('submit', '#calculator-form', function (event) {
+      var thisElement = $(this);
+
+      var formData = thisElement.serializeObject();
+      var errorMessage = getErrorMessage(formData);
+
+      if (errorMessage === null) {
+        $('.error-message').removeClass('show');
+
+        $.ajax({
+          type: 'post',
+          url: 'http://localhost:9001/php/email-sender.php',
+
+          dataType: 'json',
+          data: {
+            shownPrice: $('.order-details .order-details__price').eq(0).text(),
+            formData: thisElement.serialize()
+          },
+
+          error: function () {
+            $('#calculator-page').html('<h2 class="title calculator-page__message">Something went wrong. You could try contacting us <a href="http://www.hyperion.co/contact/">here</a>.<h2>');
+            $('#calculator-page').addClass('big-message');
+          },
+          success: function () {
+            $('#calculator-page').html('<h2 class="title calculator-page__message">We got your details and we\'ll be in touch within one day (usually a few hours).<h2>');
+            $('#calculator-page').addClass('big-message');
+          }
+        });
+      } else {
+        $('.error-message > .error-message__text').text(errorMessage);
+        $('.error-message').addClass('show');
+      }
+
+      event.preventDefault();
+    });
+
+    $(document).on('change, input', '#calculator-form', function () {
+      var thisElement = $(this);
+
+      var formData = thisElement.serializeObject();
+      var errorMessage = getErrorMessage(formData);
+
+      if (errorMessage === null) {
+        $('.error-message').removeClass('show');
+      } else if ($('.error-message').hasClass('show')) {
+        $('.error-message > .error-message__text').text(errorMessage);
+      }
+    });
+
+    $(document).on('click', '.calculator-summary .submit-calculator', function () {
+      $('#calculator-form').submit();
+    });
+
+    // http://stackoverflow.com/questions/1184624/convert-form-data-to-javascript-object-with-jquery
+    $.fn.serializeObject = function () {
+      var o = {};
+      var a = this.serializeArray();
+      $.each(a, function () {
+        if (o[this.name] !== undefined) {
+          if (!o[this.name].push) {
+            o[this.name] = [o[this.name]];
+          }
+          o[this.name].push(this.value || '');
+        } else {
+          o[this.name] = this.value || '';
+        }
+      });
+      return o;
+    };
+
+    // http://stackoverflow.com/questions/46155/validate-email-address-in-javascript
+    function validateEmail(email) {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    }
+
+    function getErrorMessage(formData) {
+      if (Object.keys(formData).length !== 6 || formData.email.length === 0) {
+        return 'All fields are mandatory';
+      } else if (!validateEmail(formData.email)) {
+        return 'The email address is not valid';
+      } else {
+        return null;
+      }
+    }
+  })();
+
   // The calculator's logic
   (function () {
     var BASE_PRICE = 2000;

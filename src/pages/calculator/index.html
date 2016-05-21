@@ -24,214 +24,218 @@
       <div class="small-container">
         <h3 class="please-tell-us title title--big">Please tell us</h3>
 
-        <ul>
-          <li class="question">
-            <div class="question__text-container">
-              <div class="question__text">
-                <p>Is this a new website or a redesign of an existing one?</p>
+        <form id="calculator-form">
+          <ul>
+            <li class="question">
+              <div class="question__text-container">
+                <div class="question__text">
+                  <p>Is this a new website or a redesign of an existing one?</p>
+                </div>
               </div>
-            </div>
 
-            <div class="question__answers-container">
-              <div class="question__answers">
-                <ul>
-                  <li>
-                    <div class="fancy-checkbox">
-                      <input type="radio" name="website-type" id="website-type-new" required>
-                      <label for="website-type-new" class="fancy-checkbox__container">
-                        <span class="fancy-checkbox__box"></span>
-                        <span class="fancy-checkbox__text">New Project</span>
-                      </label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="fancy-checkbox">
-                      <input type="radio" name="website-type" id="website-type-redesign" required>
-                      <label for="website-type-redesign" class="fancy-checkbox__container">
-                        <span class="fancy-checkbox__box"></span>
-                        <span class="fancy-checkbox__text">Redesign</span>
-                      </label>
-                    </div>
-                  </li>
-                </ul>
+              <div class="question__answers-container">
+                <div class="question__answers">
+                  <ul>
+                    <li>
+                      <div class="fancy-checkbox">
+                        <input type="radio" name="website-type" id="website-type-new" value="new">
+                        <label for="website-type-new" class="fancy-checkbox__container">
+                          <span class="fancy-checkbox__box"></span>
+                          <span class="fancy-checkbox__text">New Project</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="fancy-checkbox">
+                        <input type="radio" name="website-type" id="website-type-redesign" value="redesign">
+                        <label for="website-type-redesign" class="fancy-checkbox__container">
+                          <span class="fancy-checkbox__box"></span>
+                          <span class="fancy-checkbox__text">Redesign</span>
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
-          </li>
+            </li>
 
-          <li class="question">
-            <div class="question__text-container">
-              <div class="question__text">
-                <p>How many pages do you think the website will need?</p>
-                <p class="question__text-faded">Displaying too much information can work against you, and we recommend keeping the site simple and concise.</p>
+            <li class="question">
+              <div class="question__text-container">
+                <div class="question__text">
+                  <p>How many pages do you think the website will need?</p>
+                  <p class="question__text-faded">Displaying too much information can work against you, and we recommend keeping the site simple and concise.</p>
+                </div>
               </div>
-            </div>
 
-            <div class="question__answers-container">
-              <div class="question__answers">
-                <ul>
-                  <li>
-                    <div class="fancy-checkbox">
-                      <input type="radio" name="number-of-pages" id="number-of-pages-under-five" required>
-                      <label for="number-of-pages-under-five" class="fancy-checkbox__container">
-                        <span class="fancy-checkbox__box"></span>
-                        <span class="fancy-checkbox__text">1-5</span>
-                      </label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="fancy-checkbox">
-                      <input type="radio" name="number-of-pages" id="number-of-pages-under-ten" required>
-                      <label for="number-of-pages-under-ten" class="fancy-checkbox__container">
-                        <span class="fancy-checkbox__box"></span>
-                        <span class="fancy-checkbox__text">5-10</span>
-                      </label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="fancy-checkbox">
-                      <input type="radio" name="number-of-pages" id="number-of-pages-above-ten" required>
-                      <label for="number-of-pages-above-ten" class="fancy-checkbox__container">
-                        <span class="fancy-checkbox__box"></span>
-                        <span class="fancy-checkbox__text">10+</span>
-                      </label>
-                    </div>
-                  </li>
-                </ul>
+              <div class="question__answers-container">
+                <div class="question__answers">
+                  <ul>
+                    <li>
+                      <div class="fancy-checkbox">
+                        <input type="radio" name="number-of-pages" id="number-of-pages-under-five" value="under-five">
+                        <label for="number-of-pages-under-five" class="fancy-checkbox__container">
+                          <span class="fancy-checkbox__box"></span>
+                          <span class="fancy-checkbox__text">1-5</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="fancy-checkbox">
+                        <input type="radio" name="number-of-pages" id="number-of-pages-under-ten" value="under-ten">
+                        <label for="number-of-pages-under-ten" class="fancy-checkbox__container">
+                          <span class="fancy-checkbox__box"></span>
+                          <span class="fancy-checkbox__text">5-10</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="fancy-checkbox">
+                        <input type="radio" name="number-of-pages" id="number-of-pages-above-ten" value="above-ten">
+                        <label for="number-of-pages-above-ten" class="fancy-checkbox__container">
+                          <span class="fancy-checkbox__box"></span>
+                          <span class="fancy-checkbox__text">10+</span>
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
-          </li>
+            </li>
 
-          <li class="question">
-            <div class="question__text-container">
-              <div class="question__text">
-                <p>Do you need a CMS?</p>
+            <li class="question">
+              <div class="question__text-container">
+                <div class="question__text">
+                  <p>Do you need a CMS?</p>
+                </div>
               </div>
-            </div>
 
-            <div class="question__answers-container">
-              <div class="question__answers">
-                <ul>
-                  <li>
-                    <div class="fancy-checkbox">
-                      <input type="radio" name="need-cms" id="need-cms-yes" required>
-                      <label for="need-cms-yes" class="fancy-checkbox__container">
-                        <span class="fancy-checkbox__box"></span>
-                        <span class="fancy-checkbox__text">Yes</span>
-                      </label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="fancy-checkbox">
-                      <input type="radio" name="need-cms" id="need-cms-no" required>
-                      <label for="need-cms-no" class="fancy-checkbox__container">
-                        <span class="fancy-checkbox__box"></span>
-                        <span class="fancy-checkbox__text">No</span>
-                      </label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="fancy-checkbox">
-                      <input type="radio" name="need-cms" id="need-cms-not-sure" required>
-                      <label for="need-cms-not-sure" class="fancy-checkbox__container">
-                        <span class="fancy-checkbox__box"></span>
-                        <span class="fancy-checkbox__text">Not sure</span>
-                      </label>
-                    </div>
-                  </li>
-                </ul>
+              <div class="question__answers-container">
+                <div class="question__answers">
+                  <ul>
+                    <li>
+                      <div class="fancy-checkbox">
+                        <input type="radio" name="need-cms" id="need-cms-yes" value="yes">
+                        <label for="need-cms-yes" class="fancy-checkbox__container">
+                          <span class="fancy-checkbox__box"></span>
+                          <span class="fancy-checkbox__text">Yes</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="fancy-checkbox">
+                        <input type="radio" name="need-cms" id="need-cms-no" value="no">
+                        <label for="need-cms-no" class="fancy-checkbox__container">
+                          <span class="fancy-checkbox__box"></span>
+                          <span class="fancy-checkbox__text">No</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="fancy-checkbox">
+                        <input type="radio" name="need-cms" id="need-cms-not-sure" value="not-sure">
+                        <label for="need-cms-not-sure" class="fancy-checkbox__container">
+                          <span class="fancy-checkbox__box"></span>
+                          <span class="fancy-checkbox__text">Not sure</span>
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
-          </li>
+            </li>
 
-          <li class="question">
-            <div class="question__text-container">
-              <div class="question__text">
-                <p>Do you have a logo?</p>
-                <p class="question__text-faded">We can give you a simple one for free.</p>
+            <li class="question">
+              <div class="question__text-container">
+                <div class="question__text">
+                  <p>Do you have a logo?</p>
+                  <p class="question__text-faded">We can give you a simple one for free.</p>
+                </div>
               </div>
-            </div>
 
-            <div class="question__answers-container">
-              <div class="question__answers">
-                <ul>
-                  <li>
-                    <div class="fancy-checkbox">
-                      <input type="radio" name="have-logo" id="have-logo-yes" required>
-                      <label for="have-logo-yes" class="fancy-checkbox__container">
-                        <span class="fancy-checkbox__box"></span>
-                        <span class="fancy-checkbox__text">Yes</span>
-                      </label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="fancy-checkbox">
-                      <input type="radio" name="have-logo" id="have-logo-no" required>
-                      <label for="have-logo-no" class="fancy-checkbox__container">
-                        <span class="fancy-checkbox__box"></span>
-                        <span class="fancy-checkbox__text">No</span>
-                      </label>
-                    </div>
-                  </li>
-                </ul>
+              <div class="question__answers-container">
+                <div class="question__answers">
+                  <ul>
+                    <li>
+                      <div class="fancy-checkbox">
+                        <input type="radio" name="have-logo" id="have-logo-yes" value="yes">
+                        <label for="have-logo-yes" class="fancy-checkbox__container">
+                          <span class="fancy-checkbox__box"></span>
+                          <span class="fancy-checkbox__text">Yes</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="fancy-checkbox">
+                        <input type="radio" name="have-logo" id="have-logo-no" value="no">
+                        <label for="have-logo-no" class="fancy-checkbox__container">
+                          <span class="fancy-checkbox__box"></span>
+                          <span class="fancy-checkbox__text">No</span>
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
-          </li>
+            </li>
 
-          <li class="question">
-            <div class="question__text-container">
-              <div class="question__text">
-                <p>We can reduce the price by £250 if you agree to let us say the website was designed by us.</p>
-                <p class="question__text-faded">
-                  <!-- TODO add link -->
-                  <a href="#">What’s this?</a>
-                </p>
+            <li class="question">
+              <div class="question__text-container">
+                <div class="question__text">
+                  <p>We can reduce the price by £250 if you agree to let us say the website was designed by us.</p>
+                  <p class="question__text-faded">
+                    <!-- TODO add link -->
+                    <a href="#">What’s this?</a>
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div class="question__answers-container">
-              <div class="question__answers">
-                <ul>
-                  <li>
-                    <div class="fancy-checkbox">
-                      <input type="radio" name="give-credits" id="give-credits-yes" required>
-                      <label for="give-credits-yes" class="fancy-checkbox__container">
-                        <span class="fancy-checkbox__box"></span>
-                        <span class="fancy-checkbox__text">Sounds good</span>
-                      </label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="fancy-checkbox">
-                      <input type="radio" name="give-credits" id="give-credits-no" required>
-                      <label for="give-credits-no" class="fancy-checkbox__container">
-                        <span class="fancy-checkbox__box"></span>
-                        <span class="fancy-checkbox__text">No thanks</span>
-                      </label>
-                    </div>
-                  </li>
-                </ul>
+              <div class="question__answers-container">
+                <div class="question__answers">
+                  <ul>
+                    <li>
+                      <div class="fancy-checkbox">
+                        <input type="radio" name="give-credits" id="give-credits-yes" value="yes">
+                        <label for="give-credits-yes" class="fancy-checkbox__container">
+                          <span class="fancy-checkbox__box"></span>
+                          <span class="fancy-checkbox__text">Sounds good</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="fancy-checkbox">
+                        <input type="radio" name="give-credits" id="give-credits-no" value="no">
+                        <label for="give-credits-no" class="fancy-checkbox__container">
+                          <span class="fancy-checkbox__box"></span>
+                          <span class="fancy-checkbox__text">No thanks</span>
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
-          </li>
+            </li>
 
-          <li class="question">
-            <div class="question__text-container">
-              <div class="question__text">
-                <p>What is your email address?</p>
+            <li class="question">
+              <div class="question__text-container">
+                <div class="question__text">
+                  <p>What is your email address?</p>
+                </div>
               </div>
-            </div>
 
-            <div class="question__answers-container">
-              <div class="question__answers">
-                <ul>
-                  <li>
-                    <input type="email" placeholder="john@example.co.uk" required>
-                  </li>
-                </ul>
+              <div class="question__answers-container">
+                <div class="question__answers">
+                  <ul>
+                    <li>
+                      <input type="email" placeholder="john@example.co.uk" name="email">
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
+
+          <input type="submit" style="display: none;">
+        </form>
       </div>
 
       <div class="calculator-summary--bottom">

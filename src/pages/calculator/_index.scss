@@ -6,6 +6,23 @@
 
   font-size: 14px;
 
+  &.big-message {
+    display: table !important;
+    height: 100vh !important;
+    padding: 0 !important;
+
+    .calculator-page__message {
+      display: table-cell;
+      padding: 0 40px;
+      vertical-align: middle;
+      text-align: center;
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+
   @include large-tablet-and-over-screens {
     min-height: 100vh;
     padding-bottom: 75px;
