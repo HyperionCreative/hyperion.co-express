@@ -77,6 +77,18 @@ module.exports = function (grunt) {
       }
     },
 
+    php: {
+      server: {
+        options: {
+          base: '<%= yeoman.src %>',
+          hostname: 'localhost',
+          keepalive: true,
+          open: false,
+          port: 9001
+        }
+      }
+    },
+
     jshint: {
       options: {
         jshintrc: '.jshintrc',
