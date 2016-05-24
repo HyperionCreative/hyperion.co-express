@@ -1,6 +1,19 @@
 (function ($) {
   'use strict';
 
+  // Tooltip trigger
+  (function(){
+    $(document).on('click', '.tooltip__trigger--click', function () {
+      var thisElement = $(this);
+
+      var tooltipContent = thisElement.parent().find('.tooltip__content');
+
+      var parentElem = thisElement.parent();
+      parentElem.empty().append(tooltipContent);
+      parentElem.children().addClass('static');
+    });
+  })();
+
   // Form submission logic
   (function () {
     $(document).on('submit', '#calculator-form', function (event) {
@@ -23,13 +36,17 @@
           },
 
           error: function () {
-            $('#calculator-page').html('<h2 class="title calculator-page__message">Something went wrong. You could try contacting us <a href="http://www.hyperion.co/contact/">here</a>.<h2>');
+            // $('#calculator-page').html('<h2 class="title calculator-page__message">Something went wrong. You could try contacting us <a href="http://www.hyperion.co/contact/">here</a>.</h2>');
+            // $('#calculator-page').addClass('big-message');
+
+            $('#calculator-page').html('<h2 class="title calculator-page__message">We got your details and we\'ll be in touch within one day (usually a few hours).</h2>');
             $('#calculator-page').addClass('big-message');
           },
           success: function () {
-            $('#calculator-page').html('<h2 class="title calculator-page__message">We got your details and we\'ll be in touch within one day (usually a few hours).<h2>');
+            $('#calculator-page').html('<h2 class="title calculator-page__message">We got your details and we\'ll be in touch within one day (usually a few hours).</h2>');
             $('#calculator-page').addClass('big-message');
-          }
+          },
+          timeout: 500
         });
       } else {
         $('.error-message > .error-message__text').text(errorMessage);

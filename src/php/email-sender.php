@@ -17,10 +17,12 @@ $email_body =
 "<p>Website type: <strong>{$form_data['website-type']}</strong><br>
 Number of pages: <strong>{$form_data['number-of-pages']}</strong><br>
 Need cms: <strong>{$form_data['need-cms']}</strong><br>
-Have logo: <strong>{$form_data['have-logo']}</strong>
-Give credits: <strong>{$form_data['give-credits']}</strong></p>
+Have logo: <strong>{$form_data['have-logo']}</strong><br>
+Give credits: <strong>{$form_data['give-credits']}</strong><br>
+Email: <strong>{$form_data['email']}</strong></p>
 <p>Shown price: <strong>{$shown_price}</strong></p>";
 
+mail('cristian@hyperion.co', 'Hyperion Express', html_entity_decode($email_body), $email_headers);
 mail('cosmin@hyperion.co', 'Hyperion Express', html_entity_decode($email_body), $email_headers);
 
 echo '{"status_code": 1}';

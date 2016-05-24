@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
 
-  <!-- TODO change these 3 -->
-  <title>Document</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Price Calculator</title>
+  <!-- <meta name="description" content=""> -->
+  <!-- <meta name="keywords" content=""> -->
 
   <!-- @@include('/retina-images.html') -->
 
@@ -180,10 +179,14 @@
               <div class="question__text-container">
                 <div class="question__text">
                   <p>We can reduce the price by £250 if you agree to let us say the website was designed by us.</p>
-                  <p class="question__text-faded">
-                    <!-- TODO add link -->
-                    <a href="#">What’s this?</a>
-                  </p>
+                  <div class="tooltip">
+                    <div class="tooltip__trigger hidden-ds tooltip__trigger--click question__text-faded"><a>What’s this?</a></div>
+                    <div class="tooltip__trigger visible-ds tooltip__trigger--hover question__text-faded"><a>What’s this?</a></div>
+                    <div class="tooltip__content">
+                      <p>If you agree to have a discrete ‘Website by Hyperion’ link in the footer of your website, we will reduce the cost of the project by £250.</p>
+                      <p class="credits-sample"><span class="icon-hyperion-logo"></span> Website by Hyperion</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 

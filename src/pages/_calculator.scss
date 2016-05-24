@@ -17,6 +17,14 @@
       vertical-align: middle;
       text-align: center;
 
+      @include desktop-screens {
+        padding: 0 375px;
+      }
+
+      @include tablet-screens {
+        padding: 0 205px;
+      }
+
       a {
         text-decoration: underline;
       }
@@ -85,6 +93,23 @@
     &--bottom {
       @include large-tablet-and-over-screens {
         display: none;
+      }
+    }
+  }
+
+  .tooltip {
+    font-size: 14px;
+    font-weight: normal;
+
+    .credits-sample {
+      color: #a1a4a7;
+      line-height: 22px;
+      margin-top: 25px;
+
+      .icon-hyperion-logo {
+        font-size: 22px;
+        padding-right: 7px;
+        vertical-align: middle;
       }
     }
   }

@@ -9,6 +9,7 @@
 @import "form-elements";
 @import "generics";
 @import "responsive";
+@import "tooltip";
 @import "webfonts";
 
 @import "pages/index";
@@ -16,3 +17,15 @@
 
 // bower:scss
 // endbower
+
+// Specific browser fixes
+
+body.safari {
+  .fancy-checkbox {
+    line-height: 1;
+
+    &__container {
+      padding: 15px 0;
+    }
+  }
+}
