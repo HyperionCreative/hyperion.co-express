@@ -1,6 +1,7 @@
 <!-- build:js(.) scripts/vendor.js -->
 <!-- bower:js -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/ua-parser-js/src/ua-parser.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
@@ -24,3 +25,12 @@
   <!--@@@   })(); @@@-->
   <!--@@@ </script> @@@-->
 <!-- End of myfonts counter -->
+<script>
+  // Adds the browser's name as a class on the body
+  (function($) {
+    var parser = new window.UAParser();
+    var PARSED_UA = parser.getResult();
+
+    $('body').addClass(PARSED_UA.browser.name.toLowerCase());
+  })(window.jQuery);
+</script>
